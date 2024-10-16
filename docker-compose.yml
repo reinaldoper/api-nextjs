@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: olimpiadas-db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - olimpiadas_data:/var/lib/mysql
+    networks:
+      - olimpiadas-network
+
+  adminer_user:
+    image: adminer
+    container_name: adminer_user
+    ports:
+      - "8080:8080"
+    networks:
+      - olimpiadas-network
+
+networks:
+  olimpiadas-network:
+    driver: bridge
+
+volumes:
+  olimpiadas_data:
