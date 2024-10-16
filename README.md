@@ -1,6 +1,7 @@
 # API de Atletas
 
 ## Este projeto é uma API desenvolvida com Next.js e TypeScript para gerenciar informações de atletas, incluindo operações de CRUD e funcionalidades para relacionar atletas com esportes. A API possui rotas para criar, listar, atualizar e deletar atletas, além de funções para retornar detalhes de esportes associados aos atletas.
+[apiCodante](https://apis-docs.codante.io/atletas-brasileiros)
 
 ## Tecnologias Utilizadas
 
@@ -50,7 +51,7 @@ JWT_SECRET=seu-nome-preferencia
 - npm run dev: Executa o projeto em modo de desenvolvimento.
 - npm run build: Compila o projeto para produção.
 - npm start: Executa a versão compilada em produção.
-- docker-compose up -d: Sobe o contaner docker com o banco de dados.
+- docker-compose up -d: Sobe o container docker com o banco de dados.
 - npm run dbreset: Executa o banco de dados.
 
 ## Rotas Disponíveis
