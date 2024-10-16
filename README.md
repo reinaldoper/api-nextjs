@@ -50,6 +50,7 @@ JWT_SECRET=seu-nome-preferencia
 - npm run dev: Executa o projeto em modo de desenvolvimento.
 - npm run build: Compila o projeto para produção.
 - npm start: Executa a versão compilada em produção.
+- docker-compose up -d: Sobe o contaner docker com o banco de dados.
 - npm run dbreset: Executa o banco de dados.
 
 ## Rotas Disponíveis
