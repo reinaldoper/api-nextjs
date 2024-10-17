@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { IAthlete } from "../types/athleteType";
 import Image from "next/image";
+import Loading from "../components/Loading";
 
 export default function AthletePage() {
   const [token, setToken] = useState<string>('');
@@ -49,14 +50,14 @@ export default function AthletePage() {
     if (token) {
       fetchAthletes();
     }
-  }, [token]);
+  }, [token, olympicId]);
 
   if (error) {
     return <div className="flex justify-center m-auto">Error: {error}</div>;
   }
 
   if (!athletes) {
-    return <div className="flex justify-center m-auto">Loading...</div>;
+    return <Loading />;
   }
 
   const handleLimit = async () => {

@@ -40,6 +40,7 @@ class ControllerUsers {
 
             const hashedPassword = await bcrypt.hash(password, 10);
             const newUser = await serviceUsers.createUser({ email, password: hashedPassword, name });
+            
             return res.status(statusCode.OK).json({ message: newUser });
         } catch (error: unknown) {
             const errorMessage = error instanceof Error ? error.message : 'Error creating user';

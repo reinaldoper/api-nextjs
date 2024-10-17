@@ -1,6 +1,7 @@
 "use client";
 import { IMessageSport } from "@/app/types/userType";
 import { useEffect, useState } from "react";
+import Loading from "@/app/components/Loading";
 
 export default function PostDetails({ params }: { params: { id: string } }) {
   const [token, setToken] = useState<string>('');
@@ -53,7 +54,7 @@ export default function PostDetails({ params }: { params: { id: string } }) {
   }
 
   if (!sports) {
-    return <div className="flex justify-center m-auto">Loading...</div>;
+    return <Loading />;
   }
 
 

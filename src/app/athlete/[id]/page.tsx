@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { IMessageAthlete } from "@/app/types/athleteType";
 import { useEffect, useState } from "react";
+import Loading from "@/app/components/Loading";
 
 export default function AthleteDetails({ params }: { params: { id: string } }) {
   const [token, setToken] = useState<string>('');
@@ -54,7 +55,7 @@ export default function AthleteDetails({ params }: { params: { id: string } }) {
   }
 
   if (!athlete) {
-    return <div className="flex justify-center m-auto">Loading...</div>;
+    return <Loading />;
   }
 
 

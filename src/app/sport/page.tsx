@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { ISport } from "../types/userType";
+import Loading from "../components/Loading";
 
 export default function Sport() {
   const [token, setToken] = useState<string>('');
@@ -52,7 +53,7 @@ export default function Sport() {
   }
 
   if (!sports) {
-    return <div className="flex justify-center m-auto">Loading...</div>;
+    return <Loading />;
   }
 
   const { message } = sports;
