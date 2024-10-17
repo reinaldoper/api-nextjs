@@ -29,9 +29,9 @@ Explore a documentação da API [aqui](https://apis-docs.codante.io/atletas-bras
    ```
 
 2. Instale as dependências:
-  ```bash
-  npm install
-  ```
+   ```bash
+    npm install
+   ```
 
 3. Configure as variáveis de ambiente:
 
