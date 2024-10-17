@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Alert from "./components/Alert"; 
+import Alert from "./components/Alert";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -32,8 +32,10 @@ export default function Login() {
   };
 
   return (
+
     <div className="flex flex-col items-center justify-center min-h-screen bg-cover bg-center bg-no-repeat p-6"
-         style={{ backgroundImage: "url('/images/imagem.webp')" }}>
+      style={{ backgroundImage: "url('/images/imagem.webp')" }}>
+      {alert && <Alert message={alert.message} type={alert.type} onClose={handleCloseAlert} />}
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <h1 className="text-2xl font-bold mb-6 text-center text-black">Login</h1>
         <form onSubmit={handleLogin} className="flex flex-col gap-4">
@@ -67,7 +69,6 @@ export default function Login() {
           </a>
         </p>
       </div>
-      {alert && <Alert message={alert.message} type={alert.type} onClose={handleCloseAlert} />}
     </div>
   );
 }

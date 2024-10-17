@@ -1,7 +1,7 @@
-"use client";  
+"use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";  
+import { useRouter } from "next/navigation";
 import Alert from "../components/Alert";
 
 export default function Register() {
@@ -35,6 +35,7 @@ export default function Register() {
     <div className="flex flex-col items-center justify-center min-h-screen bg-cover bg-center bg-no-repeat 
     bg-gradient-to-r from-gray-200 to-gray-400 p-6"
       style={{ backgroundImage: "url('/images/aneis.webp')" }}>
+      {alert && <Alert message={alert.message} type={alert.type} onClose={handleCloseAlert} />}
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <h1 className="text-2xl font-bold mb-6 text-center text-black">Register</h1>
         <form onSubmit={handleRegister} className="flex flex-col gap-4">
@@ -76,7 +77,6 @@ export default function Register() {
           </a>
         </p>
       </div>
-      {alert && <Alert message={alert.message} type={alert.type} onClose={handleCloseAlert} />}
     </div>
   );
 }

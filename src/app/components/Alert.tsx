@@ -10,7 +10,7 @@ const Alert: React.FC<AlertProps> = ({ message, type, onClose }) => {
 
   return (
     <div
-      className={`top-10 left-1/2 transform -translate-x-1/2 p-4 rounded-lg shadow-lg transition-all ${
+      className={`flex justify-center transform -translate-x-1/2 p-4 rounded-lg shadow-lg transition-all ${
         type === "success" ? "bg-green-500 text-white" : "bg-red-500 text-white"
       }`}
     >
