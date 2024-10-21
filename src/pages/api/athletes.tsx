@@ -101,3 +101,4 @@ class ControllerAthletes {
 
 const controllerAthlete = new ControllerAthletes();
 export default controllerAthlete;
+//teste
