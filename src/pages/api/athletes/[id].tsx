@@ -14,3 +14,4 @@ const protectedHandler = authMiddleware(async (req: NextApiRequest, res: NextApi
 });
 
 export default protectedHandler;
+//teste
